@@ -111,16 +111,6 @@ Winter: #005393
 
               let season = $(this).attr("href");
 
-              if (season == "Default"){
-                $("#logo").attr("src", "images/four-seasons.gif");
-
-                $("#wear").attr("src", "images/300x400.png");
-
-                $("html").css("background-color", "#ccc");
-
-                alert("You clicked on the Default page, BORING!");
-              }
-
               if (season == "Spring"){
                 $("#logo").attr("src", "images/spring.gif");
 
@@ -131,7 +121,7 @@ Winter: #005393
                 alert("It's getting a bit hotter outside!");
               }
 
-              if (season == "Summer"){
+              else if (season == "Summer"){
                 $("#logo").attr("src", "images/summer.gif");
 
                 $("#wear").attr("src", "images/summer-wear.jpg");
@@ -141,7 +131,7 @@ Winter: #005393
                 alert("Temperatures are higher than usual for obvious reasons!");
               }
 
-              if (season == "Fall"){
+              else if (season == "Fall"){
                 $("#logo").attr("src", "images/fall.gif");
 
                 $("#wear").attr("src", "images/fall-wear.jpg");
@@ -151,7 +141,7 @@ Winter: #005393
                 alert("We're losing daylight, enjoy it while it lasts.");
               }
 
-              if (season == "Winter"){
+              else if (season == "Winter"){
                 $("#logo").attr("src", "images/winter.gif");
 
                 $("#wear").attr("src", "images/winter-wear.jpg");
@@ -159,6 +149,16 @@ Winter: #005393
                 $("html").css("background-color", "#005393");
 
                 alert("Wow, it's freezing.");
+              }
+              
+              else {
+                $("#logo").attr("src", "images/four-seasons.gif");
+
+                $("#wear").attr("src", "images/300x400.png");
+
+                $("html").css("background-color", "#ccc");
+
+                alert("You clicked on the Default page, BORING!");
               }
 
             //   alert("I'm clicked!");
